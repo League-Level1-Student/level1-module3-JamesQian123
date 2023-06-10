@@ -1,5 +1,7 @@
 package _05_cow_timer;
 
+import javax.swing.JOptionPane;
+
 import game_tools.Sound;
 
 /*
@@ -31,14 +33,13 @@ public class CowTimer {
         this.seconds = seconds;
         System.out.println("Cow time set to " + this.seconds + " seconds.");
     }
-    public CowTimer(int seconds) {
-    	this.seconds = seconds;
-    }
+    
     
     public void start() throws InterruptedException {
-     for(int i = 0; i < seconds; i++) {
-    	 System.out.println(seconds);
-    	 seconds--;
+     for(int i = seconds; i > 0; i--) {
+    	 System.out.println(i);
+    	 Thread.sleep(1000);
+    	
      }
     }
 
